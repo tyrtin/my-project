@@ -20,6 +20,9 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+	import { base } from '$app/paths';
 </script>
+<a href="{base}/">Home</a>
+<a href="{base}/about">About</a>
 
 <slot />
