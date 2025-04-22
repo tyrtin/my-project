@@ -1,4 +1,6 @@
 <script>
+  import { base } from '$app/paths';
+
   let Elfrane = "elfrane.jpg"
   let Toya = "toya.jpg"
   let kapten = "kapten.jpg"
@@ -6,8 +8,8 @@
   let kazutora = "https://i.pinimg.com/736x/15/8c/4c/158c4c18da0417aba909d811620b1238.jpg"
   let images = [Elfrane, Toya, kapten, Kuro, kazutora]
   let characters = []
-  for(let i = 0; i < 3; i++){
-      characters.push({image: images[i % 3]})
+  for(let i = 0; i < 5; i++){
+      characters.push({image: images[i % 5]})
   }
 </script>
 
@@ -28,6 +30,7 @@
           <br> <b>Name: </b>Elfrane
           <br> <b>Age:</b> 18
           <br><b>Gender: </b>Female
+          <a href="{base}/info"><br><b>More Information</a>
         </span>
       </div>
     </div>

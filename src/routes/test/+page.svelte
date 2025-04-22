@@ -1,5 +1,5 @@
 <script>
-    let width = 400;
+    let width = 500;
     let height = 300;
 
 
@@ -61,7 +61,7 @@ preserveAspectRatio="xMidYMid slice"
 
 -->
 <polygon
-points="0 0, {width} 0, {width} {height}, 0 150, 0 0"
+points="0 0, {width} 0, {width} {height}, 0 200, 0 0"
 fill="url(#imgPattern)"
 />
 </svg>
