@@ -5,60 +5,204 @@
   let Toya = "toya.jpg"
   let kapten = "kapten.jpg"
   let Kuro = "kuro.jpg"
-  let kazutora = "https://i.pinimg.com/736x/15/8c/4c/158c4c18da0417aba909d811620b1238.jpg"
-  let images = [Elfrane, Toya, kapten, Kuro, kazutora]
-  let characters = []
-  for(let i = 0; i < 5; i++){
-      characters.push({image: images[i % 5]})
-  }
+  let Yuhara = "Yuhara.jpg"
+  let Kawada = "Kawada.jpg"
+  let Arathorn = "arathorn.jpg"
+  let Evindal = "evindal.jpg"
+  let Filvendore = "filvendore.jpg"
+  let Aetlin = "aithlin.jpg"
+  let fillout = "fillout.jpg"
+  let characters = [
+    {image: Elfrane, name: "Elfrane", age: 18, gender: "Female",span:4, href: `${base}/elfrane`},
+    {image: Toya, name: "Toya", age: 16, gender: "Female", span:6, href: `${base}/toya`},
+    {image: kapten, name: "Kapten", age: 19, gender: "Female",span:5, href: `${base}/kapten`},
+    {image: Kuro, name: "Kuro", age: 19, gender: "Female", span:5, href: `${base}/kuro`},
+    {image: Kawada, name: "Kawada", age: 17, gender: "Female", span:5, href: `${base}/kawada`},
+    {image: Yuhara, name: "Yuhara", age: 17, gender: "Female", span:5, href: `${base}/yuhara`},
+    {image: fillout, span:2},
+    {image: Aetlin, name: "Aithlin", age: 24, gender: "Female", href: `${base}/aithlin`},
+    {image: Arathorn, name: "Arathorn", age: 19, gender: "male", href: `${base}/arathorn`},
+    {image: Filvendore, name: "Filvendore", age: 25, gender: "male", span:1, href: `${base}/filvendore`},
+    {image: Evindal, name: "Evindal", age: 19, gender: "male", span: 1, href: `${base}/evindal`},
+  ]
 </script>
 
 <main>
 
   <section>
     <div class = "first">
-      <button class="button">I'm a cool circle button</button>
-      <button class = button_under>Bla</button>
+      <div class="button" style="position:relative;">
+        <div class="tooltip0">
+          <h1>Information</h1>
+          <ul class="tooltiptext0" id="kazutora">
+            <li> <b>Name: </b> Kazutora</li>
+            <li> <b>Age: </b> 18</li>
+            <li> <b>Gender: </b> Female</li>
+            <a href="{base}/info"><b>See More</a>
+          </ul>
+        </div>
+      </div>
+
+      <div class = "button_under" style="position:relative;">
+        <div class="tooltip1">
+          <h1>Information</h1>
+          <ul class="tooltiptext1">
+            <li> <b>Name: </b> Miko</li>
+            <li> <b>Age: </b> 18</li>
+            <li> <b>Gender: </b> Female</li>
+            <a href="{base}/info"><b>See More</a>
+            </ul>
+        </div>
+      </div>
     </div>
+
     <div class = "second">
-      <img src="elfrane.jpg" alt = "Senku">
+      <img src="https://i.pinimg.com/736x/90/58/39/905839f48093c7a258bf600fa0567893.jpg" alt = "Senku" >
     </div>
+
     <div class= "third">
-      <img src="https://pm1.aminoapps.com/7423/929f86920bfcef6bf9055e023dcc2a7ad7f3810cr1-1280-1721v2_hq.jpg" alt = "Senku" >
-      <div class="tooltip">Information
-        <span class="tooltiptext">
-          <br> <b>Name: </b>Elfrane
-          <br> <b>Age:</b> 18
-          <br><b>Gender: </b>Female
-          <a href="{base}/info"><br><b>More Information</a>
-        </span>
+      <img src="https://rukminim2.flixcart.com/image/850/1000/kvlaaa80/poster/b/z/b/medium-anime-boy-aesthetic-aesthetic-anime-aesthetic-anime-boy-original-imag8gayqv2dfv9g.jpeg?q=20&crop=false" alt = "Senku" >
+      <div class="tooltip2" style="position:relative;">
+        <h1>Information</h1>
+        <ul class="tooltiptext2">
+          <li> <b>Name: </b>{characters[0].name}</li>
+          <li> <b>Age: </b>{characters[0].age} </li>
+          <li> <b>Gender: </b>{characters[0].gender}</li>
+          <nav>
+            <a href="{base}/info"><b>See More</a>
+          </nav>
+        </ul>
       </div>
     </div>
 </section>
 	<div class = "container">
       {#each characters as character}
-        <img src={character.image} alt = "karaktär" class ="name">
+        <div class="persona" style="grid-row:span {character.span}">
+          <img src={character.image} alt = "karaktär" class ="name" >
+          <div class="tooltip">
+            <h1>Information</h1>
+            <ul class="tooltiptext">
+              <li> <b>Name: </b>{character.name}</li>
+              <li> <b>Age: </b>{character.age}</li>
+              <li> <b>Gender: </b>{character.gender}</li>
+              <nav>
+                <a href="{base}{character.href}"><b>See More</a>
+              </nav>
+            </ul>
+          </div>
+        </div>
       {/each}
   </div>
+
 </main>
 
 
 <style>
+  .persona{
+    position: relative;
+    width: fit-content;
+  }
+
+  .tooltip0 .tooltiptext0 {
+    visibility: hidden;
+    
+    
+  }
+
+  .tooltip0{
+    margin-left: 10px;
+    width: 120px;
+    height: 5px;
+    cursor: pointer;
+    position: absolute;
+    top:0%;
+  }
+
+
+
+  .tooltip0:hover .tooltiptext0 {
+    visibility: visible;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+  }
+
+  .tooltip1 .tooltiptext1 {
+    visibility: hidden;
+    
+    
+  }
+
+  .tooltip1{
+    margin-left: 10px;
+    width: 120px;
+    height: 5px;
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    left:20%
+  }
+
+  .tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+  }
+
+
   .tooltip .tooltiptext {
     visibility: hidden;
     
-    cursor: pointer;
+    
   }
 
   .tooltip{
     margin-left: 10px;
-    width: 200px;
+    width: 120px;
+    height: 5px;
+    cursor: pointer;
+    position: absolute;
+    top:0%;
   }
 
 
 
   .tooltip:hover .tooltiptext {
     visibility: visible;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+  }
+
+  
+
+  .tooltip2 .tooltiptext2 {
+    visibility: hidden;
+  }
+
+  .tooltip2{
+    margin-left: 10px;
+    width: 120px;
+    height: 5px;
+    cursor: pointer;
+    position: fixed;
+    top:0%;
+  }
+
+  .tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    width: 120px;
+    height: 100px;
+    background-color: white;
   }
 
   section{
@@ -69,20 +213,13 @@
         display: block;
         width: 1440px;
         height: 320px;
-        border: none;
-        cursor: pointer;
         
-
-        /* Hide button caption text */
-        overflow: hidden;
-        color: transparent;
-
         /* The fill animation */
-        background-image: url('kazutora.jpg');
-        background-size: contain;
+        background-image: url('kazutora.png');
+        background-size: 25%;
 
         /* Store the SVG in a variable so it's easy to use */
-        --svg: url('data:image/svg+xml,\<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="black" fill-opacity="1" d="M0,160L1440,320L1440,0L0,0Z"></path></svg>');
+        --svg: url('data:image/svg+xml,\<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0 0 1440 320"><path fill="black" fill-opacity="1" d="M0,160L1440,320L1440,0L0,0Z"></path></svg>');
         /* Chrome, still requires prefix in 2022 */
         -webkit-mask: var(--svg);
         mask: var(--svg);
@@ -94,15 +231,9 @@
         display: block;
         width: 1440px;
         height: 320px;
-        border: none;
-        cursor: pointer;
-
-        /* Hide button caption text */
-        overflow: hidden;
-        color: transparent;
 
         /* The fill animation */
-        background-image: url('https://i0.wp.com/senpai.com.mx/wp-content/uploads/2021/01/Dr.-Stone-celebra-el-cumpleanos-de-Senku-Ishigami.jpg?fit=1280%2C720&ssl=1');
+        background-image: url('miko.jpg');
         background-size: contain;
 
         /* Store the SVG in a variable so it's easy to use */
@@ -110,7 +241,6 @@
         -webkit-mask: var(--svg);
         mask: var(--svg);
     }
-
 
     .first{
       width: 40px;
@@ -130,6 +260,7 @@
       border: solid 5px black;  
       background-size: contain;
       margin: 20px;
+      
 
     }
 
@@ -142,7 +273,7 @@
       margin-right: 20px;
     }
 
-  
+
 	main{
 		background-color: rgb(255, 249, 242);
 		height: 100vh;
@@ -151,20 +282,77 @@
     overflow-y: scroll;
     overflow-x: hidden;
     color: black;
+    border: solid 5px black;
+    font-family:'Times New Roman', Times, serif;
+
 }
 .container{
   display: grid;
-  grid-template-columns: 10fr 10fr 10fr;
-  grid-template-rows: 10fr 10fr 10fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, 16px);
   gap: 20px;
   width: 1020px;
   justify-self: center;
-  grid-column-start: span 2;
-  grid-row-start: span 2;
   }
 
-  .name{
+  .container img{
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
     border: solid 5px black;
+
+  }
+
+  /* .container img:nth-child(even){
+    grid-row: span 2;
+  } */
+   .container .persona:nth-child(8){
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+
+  .container .persona:nth-child(9){
+    grid-column: span 2;
+    grid-row: span 12;
+  }
+
+  /* .container .persona:active{
+    transform: scale(1.1);
+    transition: transform 0.1s;
+  } */
+
+  @media (max-width: 1300px) {
+    .first{
+      display: none;
+    }
+    .second{
+      display: none;
+    }
+    .third{
+      display: none;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      gap: 5px;
+    }
+    .container img {
+      margin-top: 5px;
+      width: 100%;
+      height: auto;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .container .persona:nth-child(8) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    .container .persona:nth-child(9) {
+      grid-column: span 2;
+      grid-row: span 12;
+    }
+
   }
 
 </style>

@@ -138,4 +138,10 @@ fill="url(#imgPattern)"
         border: solid 5px black;
         justify-self: center;
     }
+    .img{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        
+    }
 </style>
