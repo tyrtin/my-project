@@ -251,7 +251,7 @@
         height: 320px;
         
         /* The fill animation */
-        background-image: url('kazutora.png');
+        background-image: url('/kazutora.png');
         background-size: 25%;
 
         /* Store the SVG in a variable so it's easy to use */
@@ -269,7 +269,7 @@
         height: 320px;
 
         /* The fill animation */
-        background-image: url('miko.jpg');
+        background-image: url('/miko.jpg');
         background-size: contain;
 
         /* Store the SVG in a variable so it's easy to use */
