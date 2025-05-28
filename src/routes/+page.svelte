@@ -95,7 +95,7 @@
               <li> <b>Age: </b>{character.age}</li>
               <li> <b>Gender: </b>{character.gender}</li>
               <nav>
-                <a href="{base}{character.href}"><b>See More</a>
+                <a href="{character.href}"><b>See More</a>
               </nav>
             </ul>
           </div>
