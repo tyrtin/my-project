@@ -8,7 +8,7 @@
     }
     
     function normal() {
-        currentOutfit = "kawa.jpg";
+        currentOutfit = "kawa.png";
 
     }
 
@@ -31,7 +31,7 @@
     <div>
         <img src={currentOutfit} alt="Kawada" >
     </div>
-    {#if currentOutfit === "kawa.jpg"}
+    {#if currentOutfit === "kawa.png"}
         <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
         <button class= "normal" on:click={(normal)}></button>

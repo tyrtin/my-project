@@ -22,7 +22,7 @@
                 <li><b>Last name:</b> </li>
                 <li><b>Age:</b> 17</li>
                 <li><b>Species:</b> Human</li>
-                <li><b>Details:</b> 
+                <li><b>Details: My hobbies?</b> I love skateboarding with Yuhara and our other friends.  
                     <br> 
                     <br> </li>
             </ul>
@@ -59,7 +59,7 @@
         height: 200px;
         margin-top: 200px;
     }
-    
+
     legend{
         font-size: 20px;
         font-weight: bold;
