@@ -15,8 +15,6 @@
 </script>
 
 <main>
-    <section>
-    <div class="flower"></div>
         <fieldset>
             <legend> Filvendore </legend>
                 <ul> 
@@ -27,25 +25,23 @@
                     <li><b>Species:</b> Elf</li>
                     <li><b>Details: How I got my scar?</b> I was fighting Arathorn. He was young but albeit very experienced.
                         <br>I knew I had the disadvantage. But my subordinates were all afraid of him. So I had to be the one to fight him.
-                        <br>I did it for Theodluin, my adoptive son. I can still hear his scearms eco in my ears when one of them shot him in the eye. 
+                        <br>I did it for Theodluin, my adoptive son. I can still hear his screams eco in my ears when one of them shot him in the eye. 
                         <br>He surrvived but barly. I remember attacking Arathorn in a misserble attempet to distract him. Then I ran and scooped a crying Theodluin in my arms.
                         <br>But Arathorn had caught up to me and he wasted not even a second to strike. His sword stiked me over my cheek and throat. There you have it, how I got my scar. One of many. But I do not want to talk about the rest.
                         <br><b>You want the story of Theodluin?</b> That is not my story to tell. You will have to ask him, although I am not sure he wants to talk about it.
                         <br>I can say this much. I took him to Aithlin since we cooperated when the warriors attacked our territories.
-                        <br><b>If we have any special animals...</b> Hmm, ah yes we usualy ride </li>
                 </ul>
         </fieldset>
-    </section>
+
 
     
-    <h1>Karkatär: Filvendore</h1>
     <div>
         <img src={currentOutfit} alt="Filvendore" >
     </div>
     {#if currentOutfit === "f.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -71,15 +67,6 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
-    .flower{
-        height: 200px;
-        width: 460px;
-        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/048/725/761/small_2x/graphic-with-a-black-white-and-pink-elegant-plant-flower-sakura-ornament-on-an-isolated-background-png.png");
-        background-size: cover;
-    }
 
     
     legend{
@@ -97,7 +84,8 @@
         align-self: center;
         background-color: whitesmoke;
         width: 500px;
-        height: 700px;
+        height: 500px;
+        overflow-y: scroll;
     }
 
     main{

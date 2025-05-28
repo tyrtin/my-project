@@ -18,7 +18,7 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Aithlin</legend>
             <ul> 
                 <li><b>Name:</b> Aithlin</li>
                 <li><b>Last name:</b> Cinderleaf</li>
@@ -36,14 +36,13 @@
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
     <div>
         <img src={currentOutfit} alt="Elfrane" >
     </div>
     {#if currentOutfit === "ait.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -69,9 +68,6 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
     legend{
         font-size: 20px;
         font-weight: bold;
@@ -86,7 +82,8 @@
         align-self: center;
         background-color: whitesmoke;
         width: 400px;
-        height: 300px;
+        height: 400px;
+        overflow-y: scroll;
     }
 
     main{

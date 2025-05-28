@@ -13,16 +13,16 @@
   let Aetlin = "aithlin.jpg"
   let fillout = "fillout.jpg"
   let characters = [
-    {image: Elfrane, name: "Elfrane", age: 18, gender: "Female",span:4, href: `${base}/elfrane`},
+    {image: Elfrane, name: "Elfrane", age: 18, gender: "Female",span:3, href: `${base}/elfrane`},
     {image: Toya, name: "Toya", age: 16, gender: "Female", span:6, href: `${base}/toya`},
-    {image: kapten, name: "Kapten", age: 19, gender: "Female",span:5, href: `${base}/kapten`},
+    {image: kapten, name: "Kapten", age: 19, gender: "Female",span:4, href: `${base}/kapten`},
     {image: Kuro, name: "Kuro", age: 19, gender: "Female", span:5, href: `${base}/kuro`},
     {image: Kawada, name: "Kawada", age: 17, gender: "Female", span:5, href: `${base}/kawada`},
     {image: Yuhara, name: "Yuhara", age: 17, gender: "Female", span:5, href: `${base}/yuhara`},
     {image: fillout, span:2,href: `${base}`},
-    {image: Aetlin, name: "Aithlin", age: 24, gender: "Female", href: `${base}/aithlin`},
+    {image: Aetlin, name: "Aithlin", age: 40, gender: "Female", href: `${base}/aithlin`},
     {image: Arathorn, name: "Arathorn", age: 19, gender: "male", href: `${base}/arathorn`},
-    {image: Filvendore, name: "Filvendore", age: 25, gender: "male", span:1, href: `${base}/filvendore`},
+    {image: Filvendore, name: "Filvendore", age: 45, gender: "male", span:1, href: `${base}/filvendore`},
     {image: Evindal, name: "Evindal", age: 19, gender: "male", span: 1, href: `${base}/evindal`},
   ]
 </script>
@@ -56,30 +56,31 @@
 
     <div class = "second" style="position:relative;">
       <img src="elidyr.jpg" alt = "Senku" >
-      <div class="tooltip3">
-        <h1>Information</h1>
-        <ul class="tooltiptext3">
-          <li> <b>Name: </b> Elidyr</li>
-          <li> <b>Age: </b> 18</li>
-          <li> <b>Gender: </b> Female</li>
-          <a href="{base}/elidyr"><b>See More</a>
-          </ul>
-      </div>
-      
+        <div class="tooltip3">
+          <h1>Information</h1>
+            <ul class="tooltiptext3">
+              <li> <b>Name: </b> Elidyr</li>
+              <li> <b>Age: </b> 18</li>
+              <li> <b>Gender: </b> Female</li>
+              <a href="{base}/elidyr"><b>See More</a>
+            </ul>
+        </div>
     </div>
 
-    <div class= "third" style="position:relative;">
-      <img src="engell.jpg" alt = "Engell">
-      <div class="tooltip2" >
-        <h1>Information</h1>
-        <ul class="tooltiptext2">
-          <li> <b>Name: </b> Engell</li>
-          <li> <b>Age: </b> Unkown</li>
-          <li> <b>Gender: </b> Female</li>
-          <nav>
-            <a href="{base}/engell"><b>See More</a>
-          </nav>
-        </ul>
+    <div class= "third">
+      <div style="position:relative;">
+        <img src="engell.jpg" alt = "Engell">
+        <div class="tooltip2" >
+          <h1>Information</h1>
+          <ul class="tooltiptext2">
+            <li> <b>Name: </b> Engell</li>
+            <li> <b>Age: </b> Unkown</li>
+              <li> <b>Gender: </b> Female</li>
+            <nav>
+              <a href="{base}/engell"><b>See More</a>
+            </nav>
+          </ul>
+        </div>
       </div>
     </div>
 </section>
@@ -200,7 +201,7 @@
     width: 120px;
     height: 5px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top:0%;
   }
 

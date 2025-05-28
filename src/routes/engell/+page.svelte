@@ -16,7 +16,7 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Engell</legend>
             <ul> 
                 <li><b>Name:</b> Engell</li>
                 <li><b>Last name:</b> Deathwish</li>
@@ -29,14 +29,14 @@
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
+  
     <div>
         <img src={currentOutfit} alt="Elfrane" >
     </div>
     {#if currentOutfit === "engell.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -62,9 +62,6 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
     legend{
         font-size: 20px;
         font-weight: bold;

@@ -1,6 +1,6 @@
 <script>
     let currentOutfit = "ev.png";
-    let warriorOutfit = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c3d567d-af2b-469e-b10c-d5b135964ab2/dg06u31-77d706fb-6721-4a63-9fa3-a41bd55079d2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjM2Q1NjdkLWFmMmItNDY5ZS1iMTBjLWQ1YjEzNTk2NGFiMlwvZGcwNnUzMS03N2Q3MDZmYi02NzIxLTRhNjMtOWZhMy1hNDFiZDU1MDc5ZDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EXnghx51urbcBm27EHJRC3axl7pbHfeIBFiepzjWphQ"
+    let warriorOutfit = "evi.png";
     
     function warrior(){
         currentOutfit = warriorOutfit;
@@ -16,7 +16,7 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Evindal</legend>
             <ul> 
                 <li><b>Name:</b> Evindal</li>
                 <li><b>Last name:</b> Everya</li>
@@ -24,12 +24,12 @@
                 <li><b>Genre:</b> Fantasy</li>
                 <li><b>Species:</b> Elf</li>
                 <li><b>Details: How I got my scar?</b> An arrow to the eye and a sword sliced over my cheek. Yes, that is how it happend. Why? Are you surpriesed? 
-                    <br> Oh, the others told you stories about how they got them? Well, 
+                    <br> Oh, the others told you stories about how they got them? Well, I got mine in a fight agianst the politic elves. 
                     <br> </li>
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
+
     <div>
         <img src={currentOutfit} alt="Elfrane" >
     </div>
@@ -62,9 +62,7 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
+
     legend{
         font-size: 20px;
         font-weight: bold;

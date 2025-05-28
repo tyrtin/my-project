@@ -16,27 +16,27 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Captain Isidore</legend>
             <ul> 
                 <li><b>Name:</b> Isidore</li>
                 <li><b>Last name:</b> Deathsinger</li>
                 <li><b>Age:</b> 19</li>
                 <li><b>Genre:</b> Fantasy</li>
                 <li><b>Species:</b> Fairy</li>
-                <li><b>Details:</b> 
-                    <br> 
-                    <br> </li>
+                <li><b>Details: Of course you would start of strong with the most brutal question...</b> Yes I was born with wings. I am a fairy after all... Actually I had very special wings since I am the daughter of the fairy queen. 
+                    <br> And before you ask why I do not have them now I will tell you right now. Maybe a hundred years ago the humans decided that our truth was dangurous for them. They thought that the ones killing them was us. So from no where they came and to slaugtered us. 
+                    <br> As they began their purging of us they discoverd that if they took our wings they could enslave us. So insetad of killing all of us they captuerd us. I was young so they caputerd me and took my wings. I rather not talk about more about it.</li>
+                    <br> Let me guess you want to know how I got the title of captain. It is not a noble title for me. The humans captuerd me, tore my wings staight of my back and then sent me in war against my own kind... I was captured by the captain of the humans and therefore got his title. 
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
     <div>
-        <img src={currentOutfit} alt="Elfrane" >
+        <img src={currentOutfit} alt="Kapten Isidore Deathsinger" >
     </div>
     {#if currentOutfit === "ka.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -62,9 +62,7 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
+   
     legend{
         font-size: 20px;
         font-weight: bold;
@@ -79,7 +77,8 @@
         align-self: center;
         background-color: whitesmoke;
         width: 400px;
-        height: 300px;
+        height: 400px;
+        overflow-y: scroll;
     }
 
     main{

@@ -16,27 +16,25 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Yuhara</legend>
             <ul> 
-                <li><b>Name:</b> Isidore</li>
-                <li><b>Last name:</b> Deathsinger</li>
-                <li><b>Age:</b> 19</li>
-                <li><b>Genre:</b> Fantasy</li>
-                <li><b>Species:</b> Fairy</li>
+                <li><b>Name:</b> Yuhara</li>
+                <li><b>Last name:</b> </li>
+                <li><b>Age:</b> 17</li>
+                <li><b>Species:</b> Human</li>
                 <li><b>Details:</b> 
                     <br> 
                     <br> </li>
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
     <div>
         <img src={currentOutfit} alt="Elfrane" >
     </div>
     {#if currentOutfit === "yu.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -61,10 +59,7 @@
         height: 200px;
         margin-top: 200px;
     }
-
-    h1{
-        width: 100px;
-    }
+    
     legend{
         font-size: 20px;
         font-weight: bold;

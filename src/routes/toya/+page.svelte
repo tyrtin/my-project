@@ -1,17 +1,25 @@
 <script>
-    let currentOutfit = "toya.jpg";
+    let currentOutfit = "toya.png";
+    let warriorOutfit = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c3d567d-af2b-469e-b10c-d5b135964ab2/dg06u31-77d706fb-6721-4a63-9fa3-a41bd55079d2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjM2Q1NjdkLWFmMmItNDY5ZS1iMTBjLWQ1YjEzNTk2NGFiMlwvZGcwNnUzMS03N2Q3MDZmYi02NzIxLTRhNjMtOWZhMy1hNDFiZDU1MDc5ZDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EXnghx51urbcBm27EHJRC3axl7pbHfeIBFiepzjWphQ"
     
     function warrior(){
-        currentOutfit = "https://i.pinimg.com/originals/09/51/4f/09514fe23be792caf658f3306987cdd5.png";
+        currentOutfit = warriorOutfit;
+ 
     }
+    
+    function normal() {
+        currentOutfit = "toya.png";
+
+    }
+
 </script>
 
 <main>
     <fieldset>
-        <legend>Toya</legend>
+        <legend>Toya </legend>
             <ul> 
                 <li><b>Name:</b> Toya</li>
-                <li><b>Last name:</b> Seiya</li>
+                <li><b>Last name:</b> Kuroko</li>
                 <li><b>Age:</b> 16</li>
                 <li><b>Genre:</b> Fantasy</li>
                 <li><b>Species:</b> Samurai</li>
@@ -21,12 +29,15 @@
             </ul>
     </fieldset>
     
-    <h1>Karkatär: Toya Seiya</h1>
+    <h1>Karkatär: </h1>
     <div>
-        <img src={currentOutfit} alt="Elfrane" >
+        <img src={currentOutfit} alt="Toya" >
     </div>
-    <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
-
+    {#if currentOutfit === "toya.png"}
+        <button class="warriorOutfit" on:click={(warrior)}></button>
+    {:else}
+        <button class= "normal" on:click={(normal)}></button>
+    {/if}
     
 
 </main>
@@ -34,11 +45,21 @@
 
 <style>
     .warriorOutfit{
-        background-image: url("https://static.vecteezy.com/system/resources/previews/015/724/204/non_2x/simple-black-arrow-for-design-element-png.png");
+        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/050/573/369/small_2x/a-black-crow-flying-on-a-transparent-background-with-wings-fully-extended-png.png");
+        /* background-image: url("https://png.pngtree.com/png-clipart/20230825/original/pngtree-silhouette-of-flying-seagulls-picture-image_8772645.png"); */
         background-size: cover;
-        width: 100px;
-        height: 70px;
-        margin-top: 300px;
+        width: 200px;
+        height: 200px;
+        margin-top: 200px;
+        color: white;
+    }
+
+    .normal{
+        background-image: url("https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-flying-swallow-bird-png-image_10705469.png");
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        margin-top: 200px;
     }
 
     h1{

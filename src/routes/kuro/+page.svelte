@@ -16,27 +16,26 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Kuro</legend>
             <ul> 
-                <li><b>Name:</b> Isidore</li>
-                <li><b>Last name:</b> Deathsinger</li>
+                <li><b>Name:</b> Kuro</li>
+                <li><b>Last name:</b> Seiya</li>
                 <li><b>Age:</b> 19</li>
                 <li><b>Genre:</b> Fantasy</li>
-                <li><b>Species:</b> Fairy</li>
-                <li><b>Details:</b> 
-                    <br> 
-                    <br> </li>
+                <li><b>Species:</b> Human-Devil</li>
+                <li><b>Details: What's a human-devil you ask. </b> *Insert evil laugh* I have a human body but as yo ucan see I also have devil horns. Plus I have a scythe and very horrible powers.That's a human-devil...  
+                    <br> <b>What powers I posses? </b> Do you really want to know? Sure. Usually when someone owns a death scythe they control death. I decide if someone should die...OH btw the shadows are my friends. Now next question.
+                    <br><b>Is it inconvenient to have horns?</b> HMM not really. I live in a world where powers and stranges mutations are a common occurrence.</li>
             </ul>
     </fieldset>
-    
-    <h1>Karkatär: </h1>
+
     <div>
-        <img src={currentOutfit} alt="Elfrane" >
+        <img src={currentOutfit} alt="Kuro Seiya" >
     </div>
     {#if currentOutfit === "ku.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -62,9 +61,6 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
     legend{
         font-size: 20px;
         font-weight: bold;
@@ -79,7 +75,8 @@
         align-self: center;
         background-color: whitesmoke;
         width: 400px;
-        height: 300px;
+        height: 400px;
+        overflow-y: scroll;
     }
 
     main{

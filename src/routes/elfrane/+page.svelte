@@ -32,7 +32,6 @@
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
     <div>
         <img src={currentOutfit} alt="Elfrane" >
     </div>
@@ -65,9 +64,7 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
+
     legend{
         font-size: 20px;
         font-weight: bold;
@@ -82,7 +79,8 @@
         align-self: center;
         background-color: whitesmoke;
         width: 400px;
-        height: 300px;
+        height: 400px;
+        overflow-y: scroll;
     }
 
     main{

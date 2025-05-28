@@ -1,5 +1,5 @@
 <script>
-    let currentOutfit = "ka.png";
+    let currentOutfit = "elidyr.png";
     let warriorOutfit = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c3d567d-af2b-469e-b10c-d5b135964ab2/dg06u31-77d706fb-6721-4a63-9fa3-a41bd55079d2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjM2Q1NjdkLWFmMmItNDY5ZS1iMTBjLWQ1YjEzNTk2NGFiMlwvZGcwNnUzMS03N2Q3MDZmYi02NzIxLTRhNjMtOWZhMy1hNDFiZDU1MDc5ZDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EXnghx51urbcBm27EHJRC3axl7pbHfeIBFiepzjWphQ"
     
     function warrior(){
@@ -8,7 +8,7 @@
     }
     
     function normal() {
-        currentOutfit = "ka.png";
+        currentOutfit = "elidyr.png";
 
     }
 
@@ -16,7 +16,7 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Elidyr</legend>
             <ul> 
                 <li><b>Name:</b> Elidyr</li>
                 <li><b>Last name:</b> </li>
@@ -29,14 +29,13 @@
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
     <div>
-        <img src={currentOutfit} alt="Elfrane" >
+        <img src={currentOutfit} alt="elidyr" >
     </div>
-    {#if currentOutfit === "ka.png"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+    {#if currentOutfit === "elidyr.png"}
+        <button class="warriorOutfit" on:click={(warrior)}> </button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -62,9 +61,6 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
     legend{
         font-size: 20px;
         font-weight: bold;

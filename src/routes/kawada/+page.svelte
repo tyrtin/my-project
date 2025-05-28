@@ -16,27 +16,25 @@
 
 <main>
     <fieldset>
-        <legend></legend>
+        <legend>Kawada</legend>
             <ul> 
-                <li><b>Name:</b> Isidore</li>
-                <li><b>Last name:</b> Deathsinger</li>
-                <li><b>Age:</b> 19</li>
-                <li><b>Genre:</b> Fantasy</li>
-                <li><b>Species:</b> Fairy</li>
-                <li><b>Details:</b> 
+                <li><b>Name:</b> Kawada</li>
+                <li><b>Last name:</b> </li>
+                <li><b>Age:</b> 17</li>
+                <li><b>Species:</b> Human</li>
+                <li><b>Details: If I have any hobbies...</b> Yes I do. I love skateboarding, especially with Yuhara. Can't say I have any other major hobbies.
                     <br> 
                     <br> </li>
             </ul>
     </fieldset>
     
-    <h1>Karkatär: </h1>
     <div>
-        <img src={currentOutfit} alt="Elfrane" >
+        <img src={currentOutfit} alt="Kawada" >
     </div>
     {#if currentOutfit === "kawa.jpg"}
-        <button class="warriorOutfit" on:click={(warrior)}>Warrior outfit</button>
+        <button class="warriorOutfit" on:click={(warrior)}></button>
     {:else}
-        <button class= "normal" on:click={(normal)}>Normal outfit</button>
+        <button class= "normal" on:click={(normal)}></button>
     {/if}
     
 
@@ -62,9 +60,6 @@
         margin-top: 200px;
     }
 
-    h1{
-        width: 100px;
-    }
     legend{
         font-size: 20px;
         font-weight: bold;
